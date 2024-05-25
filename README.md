@@ -4,6 +4,10 @@ ImpactChain streamlines the donation process, reduces intermediaries, and ensure
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Directory Structure](#directory-structure)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
 
 ## Overview
 ImpactChain aims to be the leading blockchain platform for charitable donations, providing unmatched transparency and efficiency in the philanthropy sector.
