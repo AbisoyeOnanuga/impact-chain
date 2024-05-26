@@ -105,3 +105,101 @@ main {
     padding: 10px;
     margin-top: 1em;
 }
+
+/* Styles for the recipient charity page */
+#charity-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.charity {
+    background-color: #f9f9f9;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.charity h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.charity p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.charity button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.charity button:hover {
+    background-color: #4cae4c;
+}
+
+/* Styles for the amount confirmation page */
+#donation-confirmation {
+    text-align: center;
+    margin-top: 2em;
+    border: 1px solid #ddd;
+    padding: 2em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#donation-confirmation p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#donation-confirmation button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#donation-confirmation button:hover {
+    background-color: #4cae4c;
+}
+
+/* Styles for the donor confirmation page */
+#donor-summary {
+    text-align: center;
+    margin-top: 2em;
+    border: 1px solid #ddd;
+    padding: 2em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#donor-summary p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+#donor-summary button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+#donor-summary button:hover {
+    background-color: #4cae4c;
+}

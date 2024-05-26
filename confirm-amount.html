@@ -20,4 +20,14 @@
     </footer>
     <script src="js/confirm-amount.js"></script>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const confirmButton = document.getElementById('confirmButton');
+        confirmButton.addEventListener('click', function() {
+            // Here you would handle the blockchain transaction (not shown in this example)
+            // Redirect to the donor confirmation page
+            window.location.href = 'donor-confirmation.html';
+        });
+    });
+</script>
 </html>

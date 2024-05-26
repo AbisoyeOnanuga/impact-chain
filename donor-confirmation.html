@@ -20,4 +20,14 @@
     </footer>
     <script src="js/donor-confirmation.js"></script>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const completeButton = document.getElementById('completeButton');
+        completeButton.addEventListener('click', function() {
+            // Handle any final actions (e.g., updating donor count, displaying success message)
+            // Redirect back to the homepage
+            window.location.href = 'index.html';
+        });
+    });
+</script>
 </html>
