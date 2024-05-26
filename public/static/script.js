@@ -25,3 +25,41 @@ document.addEventListener('DOMContentLoaded', function() {
         donationsList.appendChild(listItem);
     }
 });
+
+
+
+function updateDonationTracker(donatedAmount) {
+    const goalAmount = 100; // Example goal
+    const raisedAmount = Math.min(donatedAmount, goalAmount);
+    const progressBar = document.getElementById('progress-bar');
+    const donationStatus = document.getElementById('donation-status');
+
+    const progressPercentage = (raisedAmount / goalAmount) * 100;
+    progressBar.style.width = progressPercentage + '%';
+    donationStatus.textContent = `Raised: ${raisedAmount} ETH`;
+}
+
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        this.parentElement.classList.toggle('active');
+    });
+});
+
+
+function shareOnSocialMedia(platform) {
+    const message = encodeURIComponent("I've just donated to a great cause via Impact Chain!");
+    let url;
+
+    switch (platform) {
+        case 'twitter':
+            url = `https://twitter.com/intent/tweet?text=${message}`;
+            break;
+        case 'facebook':
+            url = `https://www.facebook.com/sharer/sharer.php?u=${document.location.href}&quote=${message}`;
+            break;
+        // Add more platforms here
+    }
+
+    window.open(url, '_blank');
+}
