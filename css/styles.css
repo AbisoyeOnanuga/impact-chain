@@ -94,3 +94,14 @@ main {
     padding: 10px;
     margin-bottom: 10px;
 }
+
+/* Add styles for the donation process and confirmation sections */
+#donation-process, #donation-confirmation {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#donation-process input, #donation-confirmation button {
+    padding: 10px;
+    margin-top: 1em;
+}
