@@ -63,3 +63,4 @@ function shareOnSocialMedia(platform) {
 
     window.open(url, '_blank');
 }
+
