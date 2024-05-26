@@ -37,3 +37,8 @@ function displayRecentTransaction(amount) {
     transactionCard.textContent = `Donated ${amount} ETH`;
     transactionsSection.appendChild(transactionCard);
 }
+
+// Add this to your script.js
+document.getElementById('navigationButton').addEventListener('click', function() {
+    window.location.href = 'donate.html';
+});
