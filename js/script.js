@@ -42,3 +42,17 @@ function displayRecentTransaction(amount) {
 document.getElementById('navigationButton').addEventListener('click', function() {
     window.location.href = 'donate.html';
 });
+
+let totalDonatedAmount = 0; // Initialize with any existing total
+
+function displayRecentTransaction(amount) {
+    // Display the recent transaction
+    const transactionsSection = document.getElementById('transactions');
+    const transactionCard = document.createElement('div');
+    transactionCard.textContent = `Donated ${amount} ETH`;
+    transactionsSection.appendChild(transactionCard);
+
+    // Update total donated amount
+    totalDonatedAmount += parseFloat(amount);
+    document.getElementById('donation-status').textContent = `Raised: ${totalDonatedAmount} ETH`;
+}
