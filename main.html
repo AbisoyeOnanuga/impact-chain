@@ -15,9 +15,31 @@
         <a href="https://github.com/your-prototype">GitHub</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    <!-- Login Form -->
+    <section id="login" class="info-section">
+        <h2>Login to Create a Campaign</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Campaign Creation Form -->
+    <section id="createCampaign" class="info-section" style="display:none;">
+        <h2>Create a Donation Campaign</h2>
+        <form id="campaignForm">
+            <input type="text" placeholder="Campaign Title" required>
+            <textarea placeholder="Campaign Description" required></textarea>
+            <input type="number" placeholder="Goal Amount (ETH)" required>
+            <button type="submit">Create Campaign</button>
+        </form>
+    </section>
+
     <div id="app">
         <!-- Donation Form -->
-        <div id="donateSection">
+        <div id="donate" class="donation-section">
             <h2>Make a Donation</h2>
             <input type="number" id="donationAmount" placeholder="Enter amount in ETH">
             <button onclick="makeDonation()">Donate</button>
@@ -31,10 +53,36 @@
         </div>
     </div>
 
+    <!-- About Section -->
+    <section id="about" class="info-section">
+        <h2>About Us</h2>
+        <p>
+            Welcome to our Charity Donation App, a pioneering platform designed to streamline cryptocurrency donations. Our mission is to make giving as straightforward and transparent as possible. By leveraging blockchain technology, we ensure that every donation is secure, traceable, and directly contributes to the cause you care about.
+        </p>
+        <p>
+            Our user-friendly interface simplifies the donation process, allowing you to contribute with just a few clicks. Whether you're new to crypto or a seasoned enthusiast, our platform is built to provide an easy and accessible way to support charitable work using Ethereum.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="info-section">
+        <h2>Contact Us</h2>
+        <p>
+            Have questions or need assistance? Our team is here to help. Get in touch with us through the following channels:
+        </p>
+        <ul>
+            <li>Github: https://github.com/abisoyeonanuga/impact-chain</li>
+            <li>Email: abisoyeonanuga@gmail.com</li>
+        </ul>
+        <p>
+            We're committed to providing you with the support you need to make your charitable contributions count.
+        </p>
+    </section>
+
     <footer>
         <p>© 2024 Impact-chain, Making cryptocurrency donations easier</p>
         <p>Total Raised: <span id="totalRaised">0 ETH</span></p>
-        <p><a href="#about">About</a> | <a href="https://github.com/your-prototype">Documentation</a></p>
+        <p><a href="#about">About</a> | <a href="https://github.com/abisoyeonanuga/impact-chain">Documentation</a></p>
     </footer>
     
 </body>

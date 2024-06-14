@@ -48,35 +48,62 @@ nav a:hover {
     background-color: #e67e00;
 }
 
-/* Card Layout Styles */
-.card {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+/* Donation Section Styles */
+.donation-section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* White background */
+    color: #ff8c00; /* Orange text */
+    font-size: xxx-large;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 21px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* Input Styles */
+input[type='number'], input[type='text'], textarea, button {
+    font-size: 1.5rem; /* Larger text size */
+    padding: 15px;
+    border: 2px solid #ff8c00; /* Orange border */
+    border-radius: 15px; /* Larger border-radius */
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+input[type='number']:hover, input[type='text']:hover, textarea:hover {
+    border-color: #e67e00; /* Darker orange on hover */
+}
+
+input[type='number']:focus, input[type='text']:focus, textarea:focus {
+    border-color: #ffa500; /* Brighter orange when active */
+    box-shadow: 0 0 8px #ffa500; /* Adding a glow effect */
 }
 
 /* Button Styles */
 button {
-    background-color: #ff8c00;
+    background-color: #ff8c00; /* Orange background */
     color: #fff;
     border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #e67e00;
+    background-color: #e67e00; /* Darker orange on hover */
+}
+
+/* Info Section Styles */
+.info-section {
+    margin: 50px 0;
+    padding: 50px 0;
+    transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+    transform: scale(1.02); /* Slight increase in size on hover */
 }
 
 /* Footer Styles */
@@ -88,9 +115,21 @@ footer {
     width: 100%;
 }
 
-footer p {
-    margin: 0;
-    padding: 5px 0;
+footer a {
+    color: #ff8c00; /* Orange text links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:visited {
+    color: #ffd700; /* Gold color for visited links */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input[type='number'], input[type='text'], textarea, button {
+        font-size: 1.2rem; /* Adjusting text size for smaller screens */
+    }
 }
 
 /* Large Text for Accessibility */
@@ -108,4 +147,50 @@ footer p {
         padding: 10px 20px;
         font-size: 16px;
     }
+}
+
+/* About and Contact Section Styles */
+#about, #contact {
+    background-color: #fff3e0; /* Light orange background */
+    color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#about h2, #contact h2 {
+    color: #ff8c00; /* Orange text for headings */
+}
+
+/* List Styles for Contact Section */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    padding: 5px 0;
+}
+
+#contact li:before {
+    content: '✉️'; /* Emoji icon for list items */
+    margin-right: 10px;
+}
+
+/* Information Sections Styles */
+.info-section {
+    padding: 50px 0;
+}
+
+/* Adjusting text, border radii, font-size, and font-weight */
+.info-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff8c00; /* Orange text for headings */
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
