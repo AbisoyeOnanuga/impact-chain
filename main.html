@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy donations with cryptocurrency</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.x/dist/ethers.min.js"></script>
+    <!-- Add your CSS styles here -->
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#donate">Donate</a>
+        <a href="https://github.com/your-prototype">GitHub</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="app">
+        <!-- Donation Form -->
+        <div id="donateSection">
+            <h2>Make a Donation</h2>
+            <input type="number" id="donationAmount" placeholder="Enter amount in ETH">
+            <button onclick="makeDonation()">Donate</button>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationSection" style="display:none;">
+            <h2>Thank you for your donation!</h2>
+            <p id="confirmationMessage"></p>
+            <button onclick="returnToDonation()">Make another donation</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Impact-chain, Making cryptocurrency donations easier</p>
+        <p>Total Raised: <span id="totalRaised">0 ETH</span></p>
+        <p><a href="#about">About</a> | <a href="https://github.com/your-prototype">Documentation</a></p>
+    </footer>
+
+    <script>
+        // JavaScript code to interact with the smart contract
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        // Replace with your deployed contract address and ABI
+        const contractAddress = "YOUR_CONTRACT_ADDRESS";
+        const contractABI = []; // Your contract ABI
+        const contract = new ethers.Contract(contractAddress, contractABI, signer);
+
+        async function makeDonation() {
+            const donationAmount = document.getElementById('donationAmount').value;
+            const tx = await contract.donate({ value: ethers.utils.parseEther(donationAmount) });
+            await tx.wait();
+            document.getElementById('confirmationMessage').innerText = `Donation of ${donationAmount} ETH successful!`;
+            document.getElementById('donateSection').style.display = 'none';
+            document.getElementById('confirmationSection').style.display = 'block';
+        }
+
+        function returnToDonation() {
+            document.getElementById('donationAmount').value = '';
+            document.getElementById('donateSection').style.display = 'block';
+            document.getElementById('confirmationSection').style.display = 'none';
+        }
+
+        // Additional JavaScript for other UI interactions
+    </script>
+</body>
+</html>
