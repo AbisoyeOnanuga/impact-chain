@@ -1,205 +1,196 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+/* Accessibility Features */
+:focus {
+    outline: 3px solid #ff8c00; /* Orange outline for focused elements */
 }
 
-main {
-    padding: 2em;
+/* UI Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-#donation-form {
-    background-color: white;
-    padding: 2em;
-    margin-bottom: 2em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Apply the animation to all sections */
+section {
+    animation: fadeIn 1s ease-in-out;
 }
 
-#donation-form input, #donation-form button {
-    padding: 0.5em;
-    margin-top: 0.5em;
-}
-
-#donation-form button {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#donation-form button:hover {
-    background-color: #4cae4c;
-}
-
-#recent-donations ul {
-    list-style: none;
-    padding: 0;
-}
-
-#recent-donations li {
-    background-color: white;
-    padding: 1em;
-    margin-bottom: 1em;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#progress-bar-container {
-    width: 100%;
-    background-color: #ddd;
-}
-
-#progress-bar {
-    width: 0%;
-    height: 20px;
-    background-color: #76b852;
-    transition: width 0.4s ease-in-out;
-}
-
-#donation-status {
-    text-align: center;
-}
-
-#login {
-    text-align: center;
-    margin-top: 2em;
-}
-
-#login button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#login button:hover {
-    background-color: #45a049;
-}
-
-/* Styles for the transactions section */
-#transactions {
-    margin-top: 2em;
-}
-
-#transactions div {
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-/* Add styles for the donation process and confirmation sections */
-#donation-process, #donation-confirmation {
-    text-align: center;
-    margin-top: 2em;
-}
-
-#donation-process input, #donation-confirmation button {
-    padding: 10px;
-    margin-top: 1em;
-}
-
-/* Styles for the recipient charity page */
-#charity-list {
+/* Navigation Bar Styles */
+nav {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-.charity {
-    background-color: #f9f9f9;
-    padding: 1em;
-    margin: 1em;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.charity h2 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-}
-
-.charity p {
-    font-size: 0.9em;
-    color: #777;
-}
-
-.charity button {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 3px;
     transition: background-color 0.3s ease;
 }
 
-.charity button:hover {
-    background-color: #4cae4c;
+nav a:hover {
+    background-color: #e67e00;
 }
 
-/* Styles for the amount confirmation page */
-#donation-confirmation {
-    text-align: center;
-    margin-top: 2em;
-    border: 1px solid #ddd;
-    padding: 2em;
-    border-radius: 5px;
-    background-color: #fff;
+/* Donation Section Styles */
+.donation-section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* White background */
+    color: #ff8c00; /* Orange text */
+    font-size: xxx-large;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 21px;
 }
 
-#donation-confirmation p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
+/* Input Styles */
+input[type='number'], input[type='text'], textarea, button {
+    font-size: 1.5rem; /* Larger text size */
+    padding: 15px;
+    border: 2px solid #ff8c00; /* Orange border */
+    border-radius: 15px; /* Larger border-radius */
+    margin: 10px 0;
+    transition: all 0.3s ease;
 }
 
-#donation-confirmation button {
-    background-color: #5cb85c;
-    color: white;
+input[type='number']:hover, input[type='text']:hover, textarea:hover {
+    border-color: #e67e00; /* Darker orange on hover */
+}
+
+input[type='number']:focus, input[type='text']:focus, textarea:focus {
+    border-color: #ffa500; /* Brighter orange when active */
+    box-shadow: 0 0 8px #ffa500; /* Adding a glow effect */
+}
+
+/* Button Styles */
+button {
+    background-color: #ff8c00; /* Orange background */
+    color: #fff;
     border: none;
     cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-#donation-confirmation button:hover {
-    background-color: #4cae4c;
+button:hover {
+    background-color: #e67e00; /* Darker orange on hover */
 }
 
-/* Styles for the donor confirmation page */
-#donor-summary {
+/* Info Section Styles */
+.info-section {
+    margin: 50px 0;
+    padding: 50px 0;
+    transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+    transform: scale(1.02); /* Slight increase in size on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    margin-top: 2em;
-    border: 1px solid #ddd;
-    padding: 2em;
-    border-radius: 5px;
-    background-color: #fff;
+    padding: 20px 0;
+    width: 100%;
 }
 
-#donor-summary p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
+footer a {
+    color: #ff8c00; /* Orange text links */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#donor-summary button {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em 1em;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+footer a:visited {
+    color: #ffd700; /* Gold color for visited links */
 }
 
-#donor-summary button:hover {
-    background-color: #4cae4c;
+/* Responsive Design */
+@media (max-width: 768px) {
+    input[type='number'], input[type='text'], textarea, button {
+        font-size: 1.2rem; /* Adjusting text size for smaller screens */
+    }
+}
+
+/* Large Text for Accessibility */
+.large-text {
+    font-size: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        padding: 10px 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* About and Contact Section Styles */
+#about, #contact {
+    background-color: #fff3e0; /* Light orange background */
+    color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#about h2, #contact h2 {
+    color: #ff8c00; /* Orange text for headings */
+}
+
+/* List Styles for Contact Section */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    padding: 5px 0;
+}
+
+#contact li:before {
+    content: '✉️'; /* Emoji icon for list items */
+    margin-right: 10px;
+}
+
+/* Information Sections Styles */
+.info-section {
+    padding: 50px 0;
+}
+
+/* Adjusting text, border radii, font-size, and font-weight */
+.info-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff8c00; /* Orange text for headings */
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
