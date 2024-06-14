@@ -16,10 +16,11 @@
 
     /* Donation Section Styles */
     .donation-section {
-        font-size: large; /* Adjust font size for readability */
+        font-size: x-large; /* Adjust font size for readability */
         padding: 20px;
         border-width: 2px;
         border-radius: 15px;
+        max-height: 20vh;
     }
 
     /* Input and Button Styles */
